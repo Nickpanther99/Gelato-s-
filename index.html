@@ -6,81 +6,93 @@
 <title>Gelato Sì</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #fff8f0;
-        color: #333;
-    }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fffaf5;
+    color: #333;
+    scroll-behavior: smooth;
+}
 
-    header {
-        background: linear-gradient(135deg, #ffb6b9, #fcd5ce);
-        padding: 20px;
-        text-align: center;
-        color: #fff;
-    }
+header {
+    background: linear-gradient(135deg, #ff6b6b, #ffb6b9);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 2.5em;
-    }
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
 
-    nav {
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 10px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
 
-    nav a {
-        text-decoration: none;
-        color: #ff6b6b;
-        font-weight: bold;
-    }
+nav a {
+    text-decoration: none;
+    color: #ff6b6b;
+    font-weight: bold;
+}
 
-    section {
-        padding: 40px 20px;
-        max-width: 900px;
-        margin: auto;
-    }
+nav a.active {
+    border-bottom: 2px solid #ff6b6b;
+}
 
-    .hero {
-        text-align: center;
-    }
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-    .hero h2 {
-        font-size: 2em;
-        color: #ff6b6b;
-    }
+h2 {
+    color: #ff6b6b;
+}
 
-    .card {
-        background: #fff;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        margin-top: 20px;
-    }
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
 
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        font-size: 0.9em;
-    }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 
-    .btn {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
-        background-color: #ff6b6b;
-        color: #fff;
-        border-radius: 20px;
-        text-decoration: none;
-    }
+.grid img {
+    width: 100%;
+    border-radius: 15px;
+}
 
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 </style>
 </head>
 
@@ -93,44 +105,78 @@
 
 <nav>
     <a href="#home">Home</a>
-    <a href="#chi">Chi siamo</a>
+    <a href="#gusti">Gusti</a>
+    <a href="#galleria">Galleria</a>
     <a href="#contatti">Contatti</a>
 </nav>
 
-<section id="home" class="hero">
-    <h2>Benvenuti da Gelato Sì</h2>
-    <p>Produciamo gelato artigianale con ingredienti selezionati e tanta passione.</p>
-    <a class="btn" href="#contatti">Contattaci</a>
+<section id="home">
+    <h2>Benvenuti</h2>
+    <p>Gelato artigianale preparato ogni giorno con ingredienti freschi e selezionati.</p>
 </section>
 
-<section id="chi">
-    <div class="card">
-        <h2>Chi siamo</h2>
-        <p>
-            Gelato Sì di Corrado Giuseppe & C. Snc è una gelateria artigianale
-            che offre prodotti freschi e genuini ogni giorno.
-        </p>
-        <p>
-            Il nostro obiettivo è portare qualità, tradizione e gusto in ogni cono.
-        </p>
+<section id="gusti">
+    <h2>I nostri gusti</h2>
+    <div class="grid">
+        <div class="card">🍫 Cioccolato</div>
+        <div class="card">🍓 Fragola</div>
+        <div class="card">🍦 Vaniglia</div>
+        <div class="card">🥭 Mango</div>
+        <div class="card">🥥 Cocco</div>
+        <div class="card">🍋 Limone</div>
+    </div>
+</section>
+
+<section id="galleria">
+    <h2>Galleria</h2>
+    <div class="grid">
+        <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a">
+        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc">
+        <img src="https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3">
     </div>
 </section>
 
 <section id="contatti">
     <div class="card">
         <h2>Contatti</h2>
-        <p><strong>Indirizzo:</strong> Via Roma 57, 33019 Tricesimo (UD)</p>
-        <p><strong>Telefono:</strong> +39 0432 880873</p>
-        <p><strong>Email:</strong> bepicorrado@gmail.com</p>
-        <p><strong>P.IVA:</strong> 02137670309</p>
+        <p>Via Roma 57, Tricesimo (UD)</p>
+        <p>+39 0432 880873</p>
+        <p>bepicorrado@gmail.com</p>
 
-        <a class="btn" href="mailto:bepicorrado@gmail.com">Scrivici</a>
+        <iframe 
+            src="https://maps.google.com/maps?q=Tricesimo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="250" style="border:0; border-radius:10px;">
+        </iframe>
     </div>
 </section>
 
 <footer>
     <p>© 2026 Gelato Sì di Corrado Giuseppe & C. Snc</p>
 </footer>
+
+<script>
+// evidenzia il menu mentre scorri
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(a => {
+        a.classList.remove("active");
+        if (a.getAttribute("href").includes(current)) {
+            a.classList.add("active");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
